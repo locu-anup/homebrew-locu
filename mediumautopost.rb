@@ -5,11 +5,11 @@
 class Mediumautopost < Formula
   desc ""
   homepage "https://github.com/askcloudarchitech/mediumautopost"
-  version "0.3"
+  version "0.4"
 
   on_macos do
-    url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.3/mediumautopost_0.3_darwin_all.tar.gz"
-    sha256 "d3164ffd9ee069b99b37692fd409ffd9ee4dad8cc7b63589c01728c1d289b7c0"
+    url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.4/mediumautopost_0.4_darwin_all.tar.gz"
+    sha256 "30e0fd7da7c8e3be685a7577c2c5947b0abe804be42178ecccd4b55a34a88b96"
 
     def install
       bin.install "mediumautopost"
@@ -17,17 +17,17 @@ class Mediumautopost < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.3/mediumautopost_0.3_linux_arm64.tar.gz"
-      sha256 "0bbad64c2035652ae50d83ab36de5f64397443816fef0cea81f8a9130f392b5a"
+    if Hardware::CPU.intel?
+      url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.4/mediumautopost_0.4_linux_amd64.tar.gz"
+      sha256 "4c4ff4010df80eab6fb9232d1d2586983a7b19486a1df681ef26c4a35d1b2df9"
 
       def install
         bin.install "mediumautopost"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.3/mediumautopost_0.3_linux_amd64.tar.gz"
-      sha256 "f28cec5b6ce3eb20aaac7695293ace924bba52c6fc0232c9245ca486d859ecc6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/askcloudarchitech/mediumautopost/releases/download/v0.4/mediumautopost_0.4_linux_arm64.tar.gz"
+      sha256 "fd1cc243457e83d007191f4b10536e89e8975bcb1c6f8b992b037af3c2f1754f"
 
       def install
         bin.install "mediumautopost"
