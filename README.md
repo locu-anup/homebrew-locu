@@ -1,2 +1,2 @@
-# homebrew-askcloudarchitech
-Brew tap for askcloudarchitech projects
+# homebrew-locu
+Brew tap for locu projects
