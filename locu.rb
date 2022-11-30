@@ -1,4 +1,3 @@
-
 # typed: false
 # frozen_string_literal: true
 
@@ -6,29 +5,29 @@
 class Locu < Formula
   desc ""
   homepage "https://github.com/LocuCode/LocuCLI"
-  version "0.1"
+  version "1.4"
 
   on_macos do
-    url "https://github.com/LocuCode/LocuCLI/releases/download/v0.1/askcloudhelloworld_0.1_darwin_all.tar.gz"
-    sha256 "5d44eb6b6ef56a429a16c42d5795f0ad22a5e343a7f0e7578ab54ead3f173749"
+    url "https://github.com/LocuCode/LocuCLI/releases/download/v1.4/LocuCLI_1.4_darwin_all.tar.gz"
+    sha256 "454dda1cd418137b2ffbb699d0afa2a8d1155accb1cff416d80674f830badcbb"
 
     def install
-      bin.install "locu"
+      bin.install "LocuCLI"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LocuCode/LocuCLI/releases/download/v0.1/askcloudhelloworld_0.1_linux_arm64.tar.gz"
-      sha256 "eca7fafceca46d9a81e7f8f20d52c34a4558c2c8a8ecf4dafb93354d427cf0ed"
+      url "https://github.com/LocuCode/LocuCLI/releases/download/v1.4/LocuCLI_1.4_linux_arm64.tar.gz"
+      sha256 "1ccfc9a9a848800164be98552466bc95650facfbb562df59d9cb2a21d3c8b7e7"
 
       def install
         bin.install "locu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/LocuCode/LocuCLI/releases/download/v0.1/askcloudhelloworld_0.1_linux_amd64.tar.gz"
-      sha256 "d9969013e84e549bae888b2025b16cef240840b3ea2a61676ce8a22411e17751"
+      url "https://github.com/LocuCode/LocuCLI/releases/download/v1.4/LocuCLI_1.4_linux_amd64.tar.gz"
+      sha256 "538609145053fe80a0d040579163372e0c77f6c4f582207827f0ba10b5d14873"
 
       def install
         bin.install "locu"
